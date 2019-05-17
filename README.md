@@ -3,6 +3,7 @@ services: iot-hub
 platforms: arduino
 author: xshi
 ---
+## Forked and modified to support ArduinoJson 6.x
 
 # IoT Hub Feather HUZZAH Client application 
 [![Build Status](https://travis-ci.org/Azure-Samples/iot-hub-feather-huzzah-client-app.svg?branch=master)](https://travis-ci.org/Azure-Samples/iot-hub-feather-huzzah-client-app)
@@ -17,7 +18,7 @@ Follow [this page](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-arduin
 ## Install board with your Arduino IDE
 1. Start Arduino and open Preferences window.
 2. Enter `http://arduino.esp8266.com/stable/package_esp8266com_index.json` into Additional Board Manager URLs field. You can add multiple URLs, separating them with commas.
-3. Open Boards Manager from `Tools > Board` menu and install `esp8266 platform 2.2.0` or later
+3. Open Boards Manager from `Tools > Board` menu and install `esp8266 platform 2.2.0 - 2.4.2` 
 4. Select your ESP8266 board from `Tools > Board` menu after installation
 
 ## Install libraries
@@ -26,7 +27,7 @@ Install the following libraries from `Sketch -> Include library -> Manage librar
 * `AzureIoTHub`
 * `AzureIoTUtility`
 * `AzureIoTProtocol_MQTT`
-* `ArduinoJson`
+* `ArduinoJson > 6.x ONLY ArduinoJson 5.x and below are not supported`
 * `DHT sensor library`
 * `Adafruit Unified Sensor`
 
