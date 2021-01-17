@@ -12,6 +12,7 @@
 #include <AzureIoTUtility.h>
 
 #include "config.h"
+#include "iothubtransportmqtt.h" // For MQTT_Protocol
 
 static bool messagePending = false;
 static bool messageSending = true;
