@@ -1,7 +1,12 @@
-// Copyright (c) Microsoft. All rights reserved.
-// Licensed under the MIT license. See LICENSE file in the project root for full license information.
-
-// Please use an Arduino IDE 1.6.8 or greater
+/* Copyright (c) Microsoft. All rights reserved.
+ * Licensed under the MIT license. See LICENSE file in the project root for full license information.
+ * Please use an Arduino IDE 1.6.8 or greater
+ */
+ 
+// This is the device connection string found in "IoT Devices" in Azure. Not the iothubowner strings or the like.
+static char *connectionString = "HostName=NoorHUB.azure-devices.net;DeviceId=ESP8266-Noor;SharedAccessKey=qTtVHZYNQmtgksZwsEiE9XA8gyumD6i9dllUJcduhRM=";
+static char *ssid = "ESP";      // Wi-Fi name
+static char *pass = "rosetter"; // Wi-Fi password
 
 #include <ESP8266WiFi.h>
 #include <WiFiClientSecure.h>
@@ -12,14 +17,8 @@
 #include <AzureIoTUtility.h>
 
 #include "config.h"
-
-static bool messagePending = false;
-static bool messageSending = true;
-
-static char *connectionString = "HostName=NoorHUB.azure-devices.net;DeviceId=ESP8266-Noor;SharedAccessKey=qTtVHZYNQmtgksZwsEiE9XA8gyumD6i9dllUJcduhRM=";
-static char *ssid = "ESP";
-static char *pass = "rosetter";
-
+static bool messagePending = false; // Pending
+static bool messageSending = true;  // Sending
 static int interval = INTERVAL;
 
 void blinkLED()
