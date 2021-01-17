@@ -1,43 +1,30 @@
-#include <Adafruit_Sensor.h>
 #include <ArduinoJson.h>
-#include <DHT.h>
 
+// Start simulation setup if enabled. Else setup real DHT functions.
 #if SIMULATED_DATA
-
 void initSensor()
 {
-  // use SIMULATED_DATA, no sensor need to be inited
+    // use SIMULATED_DATA, no sensor need to be inited
 }
 
-float readTemperature()
-{
-  return random(20, 30);
+float readTemperature(){
+    return random(20, 30);
 }
 
-float readHumidity()
-{
-  return random(30, 40);
+float readHumidity(){
+    return random(30, 40);
 }
 
 #else
-
-static DHT dht(DHT_PIN, DHT_TYPE);
-void initSensor()
-{
-  dht.begin();
+float readTemperature(){
+    return dht.readTemperature();
 }
 
-float readTemperature()
-{
-  return dht.readTemperature();
+float readHumidity(){
+    return dht.readHumidity();
 }
-
-float readHumidity()
-{
-  return dht.readHumidity();
-}
-
 #endif
+// End function setup
 
 bool readMessage(int messageId, char *payload)
 {

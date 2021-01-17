@@ -5,13 +5,12 @@ static WiFiClientSecure sslClient; // for ESP8266
 const char *onSuccess = "\"Successfully invoke device method\"";
 const char *notFound = "\"No method found\"";
 
-
 static void sendCallback(IOTHUB_CLIENT_CONFIRMATION_RESULT result, void *userContextCallback)
 {
   if (IOTHUB_CLIENT_CONFIRMATION_OK == result)
   {
     Serial.println("Message sent to Azure IoT Hub");
-    blinkLED();
+    blinkLED(); // Blink a LED for visual confirmation.
   }
   else
   {
