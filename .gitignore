@@ -31,3 +31,5 @@
 # Debug files
 *.dSYM/
 *.su
+.vscode/c_cpp_properties.json
+.vscode/arduino.json
