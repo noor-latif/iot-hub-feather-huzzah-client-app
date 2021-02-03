@@ -31,8 +31,8 @@ static char *password = "password";  // Wi-Fi password
 #include <WiFiClientSecure.h>
 #include <WiFiUdp.h>
 
-#include <Adafruit_Sensor.h>  // 'Adafruit Unified Sensor' + dependencies. search for "sensor abstraction layer" in manager
-#include <DHT.h>              // Make sure you installed all the dependencies of above library
+#include <Adafruit_Sensor.h>  // 'Adafruit Unified Sensor'. search for "sensor abstraction layer" in lib manager
+#include <DHT.h>              //  DHT sensor library (by Adafruit)
 static DHT dht(DHT_PIN, DHT_TYPE);  // Create dht object from DHT class
 
 #include <AzureIoTHub.h>            // Install 'AzureIoTHub' by microsoft.
