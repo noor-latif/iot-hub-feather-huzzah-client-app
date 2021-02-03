@@ -3,10 +3,10 @@
    Please use an Arduino IDE 1.6.8 or greater
 
    Don't forget to run the python script inside the sketch folder before uploading this sketch.
-   It won't work otherwise!
+   It won't work otherwise! (Does NOT work with Microsoft Store version of Arduino)
 */
 // Follow the 7 step configuration below before uploading the sketch.
-// 0. Run the .py file inside the sketch folder!
+// 0. Run the .py script inside the sketch folder! (Does NOT work with Microsoft Store version of Arduino)
 // 1. Device ID name that you chose when creating your device.
 #define DEVICE_ID "Feather HUZZAH ESP8266 WiFi"
 // 2. If you don't have a physical DHT sensor, send simulated data to IoT hub.
