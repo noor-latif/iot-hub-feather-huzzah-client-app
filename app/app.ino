@@ -11,9 +11,9 @@
 #define DEVICE_ID "Feather HUZZAH ESP8266 WiFi"
 // 2. If you don't have a physical DHT sensor, send simulated data to IoT hub.
 #define SIMULATED_DATA false
-// 3. Set the DHT pin. Set DHT22 or DHT11 is supported.
+// 3. Set the DHT pin. DHT22 or DHT11 is supported.
 #define DHT_TYPE DHT11
-#define DHT_PIN D1
+#define DHT_PIN 4
 // 4. Send an alert when we pass a certain temperature degree.
 #define TEMPERATURE_ALERT 25
 // 5. LED_PIN flashes on successful messaging. LED will blink repeatedly if there is an error.
